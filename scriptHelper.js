@@ -1,4 +1,14 @@
 // Write your helper functions here!
+function validateInput(input) 
+{
+    if (input.trim() === '') {
+        return 'Empty';
+    } else if (isNaN(input)) {
+        return 'Not a Number';
+    } else {
+        return 'Is a Number'
+    }
+}
 require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
@@ -17,12 +27,30 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-   
+    if (input.trim() === '') {
+        return 'Empty';
+    } else if (isNaN(input)) {
+        return 'Not a Number';
+    } else {
+        return 'Is a Number';
+    }
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   
+    const pilotStatus = validateInput(pilot);
+    const copilotStatus = validateInput(copilot);
+    const fuelStatus = validateInput(fuelLevel);
+    const cargoStatus = validateInput(cargoMass);
 }
+    if (pilotStatus === 'Is a Number' || copilotStatus === 'Is a Number' ||
+        fuelStatus === 'Not a Number' || cargoStatus === 'Not a Number') {
+        document.getElementById('launchStatus').textContent = "Shuttle Not Ready for launch";
+        document.getElementById('launchStatus').style.color = "red";
+    } else {
+        document.getElementById('launchStatus').textContent = "Shuttle is ready for launch";
+        document.getElementById('launchStatus').style.color = "green";
+    }
+   
 
 async function myFetch() {
     let planetsReturned;
