@@ -14,11 +14,12 @@
   "devDependencies": {
     "@testing-library/dom": "^7.29.0",
     "@testing-library/jasmine-dom": "^1.2.0",
+    "browserify": "^17.0.0",
     "isomorphic-fetch": "^3.0.0",
-    "jasmine": "^3.6.3",
-    "browserify": "^17.0.0"
+    "jasmine": "^3.6.3"
   },
   "dependencies": {
+    "assignment5": "github:LaunchCodeAllhubs/js-assignment-5-launch-checklist-allenjosh1983",
     "jsdom": "^16.4.0"
   }
 }
