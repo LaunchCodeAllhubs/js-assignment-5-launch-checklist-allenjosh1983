@@ -5,6 +5,7 @@
 window.addEventListener("load", function () {
     const form = document.querySelector("form")
     const list = document.getElementById("faultyItems")
+    list.style.visibility ="hidden"
     form.addEventListener("submit", function (event) {
         let pilot = document.querySelector("input[name=pilotName]")
         let copilotName = document.querySelector("input[name=copilotName]")
